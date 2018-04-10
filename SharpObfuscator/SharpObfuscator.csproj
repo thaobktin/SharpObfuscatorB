@@ -1,0 +1,434 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06688A12-402E-41D5-AD5F-47CA4013EE9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SharpObfuscator</RootNamespace>
+    <AssemblyName>SharpObfuscator</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyPathDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyPathDialog.Designer.cs">
+      <DependentUpon>AssemblyPathDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\BaseImageVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\CLIHeader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\CopyImageVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\DataDirectory.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\DebugHeader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\DebugStoreType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\DOSHeader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\IBinaryVisitable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\IBinaryVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\IHeader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\Image.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ImageCharacteristics.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ImageFormatException.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ImageInitializer.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ImageReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ImageWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\Imports.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\MemoryBinaryWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\PEFileHeader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\PEOptionalHeader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ResourceDataEntry.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ResourceDirectoryEntry.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ResourceDirectoryString.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ResourceDirectoryTable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ResourceNode.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ResourceReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\ResourceWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\RuntimeImage.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\RVA.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\Section.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\SectionCharacteristics.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\SectionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Binary\SubSystem.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\BaseCodeVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\CilWorker.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\Code.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\CodeReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\CodeWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\Document.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\DocumentHashAlgorithm.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\DocumentLanguage.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\DocumentLanguageVendor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\DocumentType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ExceptionHandler.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ExceptionHandlerCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ExceptionHandlerType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\FlowControl.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\GuidAttribute.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ICodeVisitable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ICodeVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\Instruction.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\InstructionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\IScopeProvider.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ISymbolReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ISymbolStoreFactory.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ISymbolWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\IVariableDefinitionProvider.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\MethodBody.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\MethodDataSection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\MethodHeader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\OpCode.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\OpCodes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\OpCodeType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\OperandType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\Scope.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\ScopeCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\SequencePoint.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\StackBehaviour.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\SymbolStoreHelper.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\VariableDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\VariableDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Cil\VariableReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Assembly.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\AssemblyOS.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\AssemblyProcessor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\AssemblyRef.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\AssemblyRefOS.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\AssemblyRefProcessor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\BaseMetadataVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\BlobHeap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\ClassLayout.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\CodedIndex.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Constant.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\CultureUtils.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\CustomAttribute.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\DeclSecurity.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\ElementType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Event.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\EventMap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\EventPtr.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\ExportedType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Field.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\FieldLayout.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\FieldMarshal.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\FieldPtr.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\FieldRVA.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\File.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\GenericParam.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\GenericParamConstraint.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\GuidHeap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\IMetadataRow.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\IMetadataTable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\IMetadataVisitable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\IMetadataVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\ImplMap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\InterfaceImpl.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\ManifestResource.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MemberRef.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataFormatException.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataHeap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataInitializer.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataRoot.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataRowReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataRowWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataStream.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataStreamCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataTableReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataTableWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataToken.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MetadataWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Method.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MethodImpl.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MethodPtr.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MethodSemantics.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\MethodSpec.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Module.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\ModuleRef.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\NestedClass.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Param.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\ParamPtr.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Property.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\PropertyMap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\PropertyPtr.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\RowCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\StandAloneSig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\StringsHeap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\TableCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\TablesHeap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\TokenType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\TypeDef.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\TypeRef.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\TypeSpec.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\UserStringsHeap.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Metadata\Utilities.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\Array.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\ArrayShape.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\BaseSignatureVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\Class.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\Constraint.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\CustomAttrib.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\CustomMod.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\FieldSig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\FnPtr.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\GenericArg.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\GenericInst.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\GenericInstSignature.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\InputOutputItem.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\ISignatureVisitable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\ISignatureVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\LocalVarSig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\MarshalSig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\MethodDefSig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\MethodRefSig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\MethodSig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\MethodSpec.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\MVar.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\Param.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\PropertySig.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\Ptr.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\RetType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\Signature.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\SignatureReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\SignatureWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\SigType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\SzArray.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\TypeSpec.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\ValueType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil.Signatures\Var.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AggressiveReflectionReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ArrayDimension.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ArrayDimensionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ArrayType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyFactory.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyFlags.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyHashAlgorithm.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyKind.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyLinkedResource.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyNameDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyNameReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\AssemblyNameReferenceCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\BaseAssemblyResolver.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\BaseReflectionReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\BaseReflectionVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\BaseStructureVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\CallSite.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\CompactFrameworkCompatibility.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\Constants.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ConstraintCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ConstructorCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\CustomAttribute.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\CustomAttributeCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\DefaultAssemblyResolver.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\EmbeddedResource.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\EventAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\EventDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\EventDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\EventReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ExternTypeCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\FieldAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\FieldDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\FieldDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\FieldReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\FileAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\FunctionPointerType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\GenericArgumentCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\GenericContext.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\GenericInstanceMethod.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\GenericInstanceType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\GenericParameter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\GenericParameterAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\GenericParameterCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\HashCodeProvider.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IAssemblyResolver.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ICustomAttributeProvider.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IDetailReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IGenericInstance.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IGenericParameterProvider.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IHasConstant.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IHasMarshalSpec.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IHasSecurity.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IMemberDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IMemberReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IMetadataScope.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IMetadataTokenProvider.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IMethodSignature.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ImportContext.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\InterfaceCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IReflectionStructureVisitable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IReflectionStructureVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IReflectionVisitable.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IReflectionVisitor.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\IRequireResolving.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\LinkedResource.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ManifestResourceAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MarshalSpec.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MemberReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MemberReferenceCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodCallingConvention.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodImplAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodReturnType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodSemanticsAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\MethodSpecification.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\Modifiers.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ModuleDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ModuleDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ModuleReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ModuleReferenceCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\NativeType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\NestedTypeCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\OverrideCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ParameterAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ParameterDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ParameterDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ParameterReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PinnedType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PInvokeAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PInvokeInfo.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PointerType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PropertyAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PropertyDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PropertyDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\PropertyReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ReferenceType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ReflectionController.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ReflectionException.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ReflectionHelper.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ReflectionReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ReflectionWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\Resource.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\ResourceCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\SecurityAction.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\SecurityDeclaration.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\SecurityDeclarationCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\SecurityDeclarationReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\SentinelType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\StructureReader.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\StructureWriter.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TableComparers.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TargetRuntime.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TypeAttributes.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TypeDefinition.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TypeDefinitionCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TypeReference.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TypeReferenceCollection.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\TypeSpecification.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Cecil\VariantType.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Xml\MiniParser.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Xml\SecurityParser.cs" />
+    <Compile Include="Obfuscation2\CECIL\Mono.Xml\SmallXmlParser.cs" />
+    <Compile Include="Obfuscation2\Obfuscator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AssemblyPathDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AssemblyPathDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="CIL Specification.pdf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SharpObfuscatorSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
